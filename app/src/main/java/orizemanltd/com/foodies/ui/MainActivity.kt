@@ -1,4 +1,4 @@
-package orizemanltd.com.foodies
+package orizemanltd.com.foodies.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_main.*
+import orizemanltd.com.foodies.R
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -18,9 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.navHostFragment)
         val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.recipesFragment,
-                R.id.favoriteRecipesFragment,
-                R.id.foodJokeFragment
+            R.id.recipesFragment,
+            R.id.favoriteRecipesFragment,
+            R.id.foodJokeFragment
             )
         )
         bottomNavigationView.setupWithNavController(navController)
