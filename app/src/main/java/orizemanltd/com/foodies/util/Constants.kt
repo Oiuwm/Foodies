@@ -1,4 +1,4 @@
-package orizemanltd
+package orizemanltd.com.foodies.util
 
 class Constants {
 

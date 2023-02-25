@@ -1,4 +1,4 @@
-package orizemanltd
+package orizemanltd.com.foodies.data.network
 
 import orizemanltd.com.foodies.model.FoodRecipe
 import retrofit2.Response

@@ -1,4 +1,0 @@
-package orizemanltd
-
-class RemoteDataSource() {
-}
