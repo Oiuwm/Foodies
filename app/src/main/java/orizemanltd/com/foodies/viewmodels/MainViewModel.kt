@@ -1,4 +1,4 @@
-package orizemanltd
+package orizemanltd.com.foodies.viewmodels
 
 import android.app.Application
 import android.content.Context
@@ -7,10 +7,11 @@ import android.net.NetworkCapabilities
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.internal.Contexts.getApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import orizemanltd.com.foodies.data.Repository
-import orizemanltd.com.foodies.model.FoodRecipe
+import orizemanltd.com.foodies.models.FoodRecipe
 import orizemanltd.com.foodies.util.NetworkResult
 import retrofit2.Response
 import javax.inject.Inject
@@ -20,7 +21,7 @@ class MainViewModel @Inject constructor(
     private val repository: Repository, application: Application
 ) : AndroidViewModel(application) {
 
-    private val recipesResponse: MutableLiveData<NetworkResult<FoodRecipe>> = MutableLiveData()
+    val recipesResponse: MutableLiveData<NetworkResult<FoodRecipe>> = MutableLiveData()
 
     fun getRecipes(queries: Map<String, String>) = viewModelScope.launch {
         getRecipesSafeCall(queries)
@@ -60,6 +61,13 @@ class MainViewModel @Inject constructor(
             }
         }
     }
+
+    /**
+     * This function checks the internet
+     *
+     * Returns true if internet connection is available
+     * Returns false if there's no internet connection
+     */
 
     private fun hasInternetConnection(): Boolean {
         val connectivityManager = getApplication<Application>().getSystemService(

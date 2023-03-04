@@ -1,4 +1,4 @@
-package orizemanltd.com.foodies.model
+package orizemanltd.com.foodies.models
 
 
 import com.google.gson.annotations.SerializedName

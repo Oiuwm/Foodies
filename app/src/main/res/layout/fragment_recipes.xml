@@ -7,8 +7,9 @@
     android:background="@color/lightGray"
     tools:context=".ui.fragments.recipes.RecipesFragment">
 
+
     <com.facebook.shimmer.ShimmerFrameLayout
-        android:id="@+id/recyclerView"
+        android:id="@+id/shimmerFrameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -18,23 +19,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <include layout="@layout/placeholder_row_layout"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/placeholder_row_layout" />
+
+            <include layout="@layout/placeholder_row_layout" />
+
+            <include layout="@layout/placeholder_row_layout" />
+
+            <include layout="@layout/placeholder_row_layout" />
+        </LinearLayout>
+
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/flButton"
+        android:id="@+id/floatingActionButton2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="78dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
-        android:focusable="true"
         android:src="@drawable/ic_restaurant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:tint="@color/white" />
 
     <ImageView
         android:id="@+id/error_imageView"

@@ -1,6 +1,6 @@
 package orizemanltd.com.foodies.data.network
 
-import orizemanltd.com.foodies.model.FoodRecipe
+import orizemanltd.com.foodies.models.FoodRecipe
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.QueryMap

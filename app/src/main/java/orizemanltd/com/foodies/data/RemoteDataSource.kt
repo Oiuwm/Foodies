@@ -1,7 +1,7 @@
 package orizemanltd.com.foodies.data
 
 import orizemanltd.com.foodies.data.network.FoodRecipesApi
-import orizemanltd.com.foodies.model.FoodRecipe
+import orizemanltd.com.foodies.models.FoodRecipe
 import retrofit2.Response
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package orizemanltd.com.foodies.adapter
+package orizemanltd.com.foodies.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import orizemanltd.com.foodies.databinding.RecipesRowLayoutBinding
-import orizemanltd.com.foodies.model.Result
+import orizemanltd.com.foodies.models.Result
 
 class RecipesAdapter() : ListAdapter<Result, RecipesAdapter.MyViewModel>(MainAdapterDiff) {
 
